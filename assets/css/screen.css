@@ -1,0 +1,37 @@
+
+@media screen and (max-width: 700px) {
+  /*====log In=====*/
+  input[type=button], input[type=submit], input[type=reset], button{
+    padding: 5px 30px;
+    font-size: 9px;
+  }
+
+  .fadeIn.second, .fadeIn.third {
+    font-size: 11px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /*====log In=====*/
+  .fadeIn.fourth {
+    font-size: xx-small;
+  }
+  .fadeIn.second, .fadeIn.third {
+    font-size: 11px;
+    width: auto;
+  }
+  .fadeIn.second.display-block, .fadeIn.third.display-block{
+    width: 350px;
+  }
+  a{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*====log In=====*/
+  .fadeIn.second.display-block, .fadeIn.third.display-block{
+    width: 250px;
+  }
+}
