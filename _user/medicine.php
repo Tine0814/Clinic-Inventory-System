@@ -215,14 +215,11 @@ select {
 
 
                                 <td>
-                                    <!-- <a href="./studentHealthForm.php?edit=<?php echo $Id?>" class="btn btn_edit"
-                                        id="edit"><i class="fa-solid fa-pen-to-square"></i></a> -->
-                                    <a href="./profile.php?edit=<?php echo $Id?>" class="btn btn_edit" id="edit"><i
-                                            class="fa-solid fa-eye"></i> View</a>
-                                    <a href="./healthRecords.php?delete=<?php echo $row['id']; ?>"
+                                    <a href="./medicineGet?edit=<?php echo $row['id'];?>" class="btn btn_edit"
+                                        id="edit"><i class="fa-solid fa-eye"></i> View</a>
+                                    <a href="medicine?delete=<?php echo $row['id']; ?>"
                                         onclick="return confirm('Are you sure you want to delete the data')"
-                                        class="btn btn_delete" id="btn_modal"><i class="fa-solid fa-trash"></i>
-                                        Delete<a>
+                                        class="btn btn_delete"><i class="fa-solid fa-trash"></i> Delete</a>
                                 </td>
                             </tr>
 
@@ -258,15 +255,11 @@ select {
 
 
                                 <td>
-                                    <!-- <a href="./studentHealthForm.php?edit=<?php echo $Id?>" class="btn btn_edit"
-                                        id="edit"><i class="fa-solid fa-pen-to-square"></i></a> -->
-                                    <a href="./profile.php?edit=<?php echo $Id?>" class="btn btn_edit" id="edit"><i
-                                            class="fa-solid fa-eye"></i> View</a>
-                                    <a href="./healthRecords.php?delete=<?php echo $row['id']; ?>"
+                                    <a href="./medicineGet?edit=<?php echo $row['id'];?>" class="btn btn_edit"
+                                        id="edit"><i class="fa-solid fa-eye"></i> View</a>
+                                    <a href="medicine?delete=<?php echo $row['id']; ?>"
                                         onclick="return confirm('Are you sure you want to delete the data')"
-                                        class="btn btn_delete" id="btn_modal"><i class="fa-solid fa-trash"></i>
-                                        Delete<a>
-                                </td>
+                                        class="btn btn_delete"><i class="fa-solid fa-trash"></i> Delete</a>
                             </tr>
 
 
@@ -300,14 +293,11 @@ select {
 
 
                                 <td>
-                                    <!-- <a href="./studentHealthForm.php?edit=<?php echo $Id?>" class="btn btn_edit"
-                                        id="edit"><i class="fa-solid fa-pen-to-square"></i></a> -->
-                                    <a href="./profile.php?edit=<?php echo $Id?>" class="btn btn_edit" id="edit"><i
-                                            class="fa-solid fa-eye"></i> View</a>
-                                    <a href="./healthRecords.php?delete=<?php echo $row['id']; ?>"
+                                    <a href="./medicineGet?edit=<?php echo $row['id'];?>" class="btn btn_edit"
+                                        id="edit"><i class="fa-solid fa-eye"></i> View</a>
+                                    <a href="medicine?delete=<?php echo $row['id']; ?>"
                                         onclick="return confirm('Are you sure you want to delete the data')"
-                                        class="btn btn_delete" id="btn_modal"><i class="fa-solid fa-trash"></i>
-                                        Delete<a>
+                                        class="btn btn_delete"><i class="fa-solid fa-trash"></i> Delete</a>
                                 </td>
                             </tr>
 
