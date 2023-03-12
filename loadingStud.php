@@ -7,11 +7,19 @@ if(isset($_SESSION["users"])){
 
     $users = $_SESSION["users"];
     if($users['usertype'] == "student"){
-        header('Location: ./_student/studentHealthForm');
+        header('Location: ./_student/studentHealthForm.php');
     }
     
 }
-
+$secret = "6LeEpnckAAAAAH46Lcwe36v46RfQ84CDbTmghROQ";
+  $response = $_POST['g-recaptcha-response'];
+  $remoteip = $_SERVER['REMOTE_ADDR'];
+  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
+  $data = file_get_contents($url);
+  $row = json_decode($data, true);
+    
+  if ($row['success'] == "true") {
+    
 if (isset($_POST['email']) && isset($_POST['password'])) {
     function validate($data){
         $data = trim($data);
@@ -24,11 +32,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     if(empty($email)){
-        header('Location: loginStudent?error=Username is Required');
+        header('Location: loginStudent.php?error=Username is Required');
             exit();
     }
     elseif(empty($password)){
-        header('Location:  loginStudent?error=Password is Required');
+        header('Location:  loginStudent.php?error=Password is Required');
         exit();
     }
     else{
@@ -37,14 +45,19 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     
         if ($users['email']===$email && $users['password']===$password) {
              $_SESSION['users'] = $users;
-            header('refresh:5;url= ./_student/approval');
+            header('refresh:5;url= ./_student/approval.php');
+            // echo "<script>alert('Wow you are not a robot 😲');</script>";
         }
         else{
-            header('Location:  loginStudent?error=Wrong Password or Invalid Username');
+            header('Location:  loginStudent.php?error=Wrong Password or Invalid Username');
         }
     }
 
 }
+  } else {
+    // echo "<script>alert('Oops you are a robot 😡');</script>";
+     header('Location:  loginStudent.php?error=You are Robot');
+  }
 
 ?>
 <!DOCTYPE html>
